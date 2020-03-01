@@ -1,21 +1,19 @@
 import random
+
 while True:
-    ch = int(input("Press 1 for Encrypt Or 2 for Decrypt:-\n"))
+    ch = int(input("Press 1 for Encrypt || 2 for Decrypt:-\n>>>"))
 
     if ch == 1:
         text = input("Text:").lower()
 
         alpha = [a for a in range(97,123)]
 
-        charactrize=[]
-        for al in alpha:
-            charactrize.append(chr(al))
+        charactrize=[ chr(al) for al in alpha]
         charactrize.append(' ')
 
-        key =[]
         shuffled = random.sample(alpha,len(alpha))
-        for sh in shuffled:
-            key.append(chr(sh))
+
+        key =[chr(sh) for sh in shuffled]
         key.append(' ')
 
         print("\n============================================")
@@ -31,9 +29,7 @@ while True:
 
         alpha = [a for a in range(97,123)]
 
-        charactrize=[]
-        for al in alpha:
-            charactrize.append(chr(al))
+        charactrize=[chr(al) for al in alpha]
         charactrize.append(' ')
     
         print("\n============================================")
